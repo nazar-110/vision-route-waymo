@@ -1,0 +1,60 @@
+seed: 23
+mode: waymo_perception_multisegment
+experiment:
+  name: waymo_camera_lidar_heldout
+  input_contract: front_camera_lidar_bev_past_ego_motion
+  label_source: future_ego_poses_from_later_log_frames
+  inputs: FRONT camera image, LiDAR BEV raster, past ego motion
+  labels: future ego poses from later frames in the logged drive
+  inference_uses_future_labels: false
+  split_policy: train on all downloaded segments except the held-out last segment
+data:
+  raw_dir: data/raw/waymo_perception
+  processed_dir: data/processed/waymo_perception
+  camera: FRONT
+  image_width: 320
+  image_height: 192
+  past_steps: 16
+  future_steps: 20
+  dt: 0.2
+  frame_stride: 2
+  max_records_per_segment: 80
+  val_file_indices: [-1]
+  render_source_file_index: -1
+lidar:
+  x_min: 0.0
+  x_max: 70.0
+  y_min: -35.0
+  y_max: 35.0
+  z_min: -3.0
+  z_max: 3.0
+  height: 160
+  width: 160
+model:
+  image_backbone: tiny
+  image_feature_dim: 128
+  use_lidar: true
+  lidar_channels: 3
+  lidar_feature_dim: 128
+  ego_feature_dim: 64
+  hidden_dim: 256
+  command_vocab: 4
+  pretrained: false
+  base_strategy: constant_curvature
+  zero_init_residual: true
+training:
+  epochs: 12
+  batch_size: 8
+  lr: 0.0004
+  weight_decay: 0.0001
+  loss: smooth_l1
+  smoothness_weight: 0.02
+  num_workers: 0
+  device: cpu
+outputs:
+  dir: outputs/waymo_multimodal
+  checkpoint_dir: outputs/waymo_multimodal/checkpoints
+visualization:
+  line_thickness: 8
+  fps: 10
+  video_frames: 80

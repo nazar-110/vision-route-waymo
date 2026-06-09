@@ -1,0 +1,8 @@
+# Real Waymo parsing is best installed through scripts/setup_wsl_waymo.sh.
+# The official Waymo wheel pins old dependencies, while current package
+# indexes may not expose every pinned transitive wheel. The setup script
+# installs the parser stack that was verified for this project.
+numpy==1.23.5
+protobuf==3.20.3
+tensorflow==2.12.0; platform_system == "Linux" and python_version < "3.11"
+opencv-python-headless==4.8.1.78

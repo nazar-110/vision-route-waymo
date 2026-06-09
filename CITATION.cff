@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use VisionRoute, please cite this repository and the Waymo Open Dataset."
+title: "VisionRoute: Waymo Camera + LiDAR Ego Trajectory Prediction"
+authors:
+  - family-names: "Joshua"
+version: "0.1.0"
+date-released: "2026-05-23"
+license: "MIT"
+keywords:
+  - autonomous-driving
+  - computer-vision
+  - trajectory-prediction
+  - waymo-open-dataset
+  - lidar

@@ -1,0 +1,18 @@
+name: vision-route-waymo
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - opencv
+  - matplotlib
+  - pyyaml
+  - tqdm
+  - pytorch
+  - torchvision
+  - pytest
+  - imageio
+  # TensorFlow and the official Waymo wheel are optional real-data extras.
+  # Install them with pip only when parsing Waymo TFRecords.

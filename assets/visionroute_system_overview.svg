@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="VisionRoute system overview">
+  <defs>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#21313a"/>
+      <stop offset="1" stop-color="#12171b"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fafc"/>
+      <stop offset="1" stop-color="#edf2f7"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-20%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="520" fill="#f8fafc"/>
+  <rect x="38" y="38" width="1124" height="444" rx="26" fill="url(#panel)" stroke="#d7dee8"/>
+
+  <g transform="translate(78 76)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#111827">VisionRoute</text>
+    <text x="0" y="34" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#4b5563">Camera + LiDAR ego trajectory prediction with camera route overlay</text>
+  </g>
+
+  <g transform="translate(78 150)" filter="url(#softShadow)">
+    <rect width="320" height="250" rx="16" fill="url(#road)"/>
+    <path d="M122 250 L164 64 L197 64 L250 250 Z" fill="#2f3f48"/>
+    <path d="M161 250 L177 70" stroke="#f8fafc" stroke-width="5" stroke-dasharray="22 18" opacity="0.72"/>
+    <path d="M228 236 C224 202 214 169 202 139 C194 119 186 98 180 72" fill="none" stroke="#18c37e" stroke-width="14" stroke-linecap="round"/>
+    <path d="M224 236 C219 201 207 169 192 139 C182 118 172 98 165 74" fill="none" stroke="#60a5fa" stroke-width="8" stroke-linecap="round" opacity="0.82"/>
+    <circle cx="228" cy="236" r="7" fill="#18c37e"/>
+    <circle cx="202" cy="139" r="6" fill="#18c37e"/>
+    <circle cx="180" cy="72" r="5" fill="#18c37e"/>
+    <rect x="18" y="18" width="128" height="52" rx="8" fill="#0b1117" opacity="0.72"/>
+    <circle cx="34" cy="35" r="5" fill="#18c37e"/>
+    <text x="48" y="40" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#ffffff">Prediction</text>
+    <circle cx="34" cy="55" r="5" fill="#60a5fa"/>
+    <text x="48" y="60" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#ffffff">Ground truth</text>
+  </g>
+
+  <g transform="translate(450 156)">
+    <rect x="0" y="0" width="230" height="56" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="20" y="35" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#111827">FRONT camera</text>
+
+    <rect x="0" y="82" width="230" height="56" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="20" y="117" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#111827">LiDAR BEV raster</text>
+
+    <rect x="0" y="164" width="230" height="56" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="20" y="199" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#111827">Past ego motion</text>
+  </g>
+
+  <g stroke="#64748b" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M680 184 C720 184 725 224 760 224"/>
+    <path d="M680 266 C720 266 725 248 760 248"/>
+    <path d="M680 348 C720 348 725 274 760 274"/>
+  </g>
+
+  <g transform="translate(760 178)" filter="url(#softShadow)">
+    <rect width="250" height="140" rx="18" fill="#111827"/>
+    <text x="28" y="42" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Fusion planner</text>
+    <text x="28" y="76" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#cbd5e1">CNN features + ego state</text>
+    <text x="28" y="104" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#cbd5e1">constant-curvature prior</text>
+  </g>
+
+  <path d="M1010 248 C1042 248 1056 248 1088 248" stroke="#64748b" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M1082 240 L1092 248 L1082 256" stroke="#64748b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(900 356)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#111827">Outputs</text>
+    <text x="0" y="28" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#4b5563">20 future vehicle-frame waypoints</text>
+    <text x="0" y="54" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#4b5563">Camera overlay video + BEV plot</text>
+    <text x="0" y="80" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#4b5563">ADE, FDE, smoothness metrics</text>
+  </g>
+</svg>
