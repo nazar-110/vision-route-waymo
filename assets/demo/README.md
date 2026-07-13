@@ -4,7 +4,7 @@ This folder contains a small demo extract generated from a Waymo Open Dataset Pe
 
 Included files:
 
-- `prediction_overlay.mp4`: short prediction-only route overlay clip
+- `prediction_overlay.mp4`: 8-second H.264 baseline, `yuv420p`, fast-start prediction-only route overlay clip
 - `prediction_overlay_first_frame.png`: first-frame camera overlay preview
 - `bev_comparison.png`: bird's-eye-view trajectory plot
 - `sequence_metrics.json`: metrics for the short rendered sequence

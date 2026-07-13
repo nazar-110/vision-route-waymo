@@ -11,6 +11,7 @@ The repository is intentionally focused: one clean Waymo camera + LiDAR pipeline
 [![Play the prediction overlay demo](assets/demo/prediction_overlay_first_frame.png)](https://nazar-110.github.io/vision-route-waymo/docs/prediction-overlay.html)
 
 - [Play the prediction overlay demo](https://nazar-110.github.io/vision-route-waymo/docs/prediction-overlay.html)
+- [Play/download the 8-second H.264 MP4 demo](https://raw.githubusercontent.com/nazar-110/vision-route-waymo/main/assets/demo/prediction_overlay.mp4)
 - [Bird's-eye-view trajectory comparison](assets/demo/bev_comparison.png)
 - [Demo metrics JSON](assets/demo/sequence_metrics.json)
 
@@ -124,7 +125,7 @@ outputs/video_gallery/waymo_sequence_prediction_only_first_frame.png
 outputs/video_gallery/waymo_sequence_bev.png
 ```
 
-Full generated videos and screenshots are not committed because they are derived from Waymo dataset content and can be regenerated locally after accepting Waymo's terms. The one-second H.264 preview under `assets/demo/` is an intentional lightweight exception.
+Full generated videos and screenshots are not committed to this repo because they are derived from Waymo dataset content and can be regenerated locally after accepting Waymo's terms. The small files in `assets/demo/` are the only committed demo extract.
 
 ## Predict On A New Waymo Segment
 
@@ -205,9 +206,9 @@ Do not commit:
 - `outputs/waymo_multimodal/`
 - `outputs/video_gallery/`
 - `outputs/predictions/`
-- `*.tfrecord`, `*.pt`, other generated `*.mp4` files, `__pycache__/`, `.pytest_cache/`
+- `*.tfrecord`, `*.pt`, generated `*.mp4` files outside `assets/demo/`, `__pycache__/`, `.pytest_cache/`
 
-The `.gitignore` keeps those files out of git while explicitly allowing the small `assets/demo/prediction_overlay.mp4` preview.
+The `.gitignore` keeps those files out of git while explicitly allowing the curated demo assets under `assets/demo/`.
 
 ## Dataset And Attribution
 
