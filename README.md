@@ -6,6 +6,16 @@ VisionRoute is a real-data autonomous-driving ML project that predicts the ego v
 
 The repository is intentionally focused: one clean Waymo camera + LiDAR pipeline and no fake dataset success. If Waymo authentication or parsing dependencies are missing, the scripts fail with explicit setup instructions.
 
+## Demo
+
+![Prediction overlay first frame](assets/demo/prediction_overlay_first_frame.png)
+
+- [Short MP4 prediction overlay demo](assets/demo/prediction_overlay.mp4)
+- [Bird's-eye-view trajectory comparison](assets/demo/bev_comparison.png)
+- [Demo metrics JSON](assets/demo/sequence_metrics.json)
+
+The included demo is a small Waymo Open Dataset extract used only for research illustration. Raw Waymo TFRecords, checkpoints, and full generated output folders are not committed.
+
 ## Highlights
 
 - Real Waymo Open Dataset Perception TFRecord integration
@@ -43,7 +53,7 @@ src/models/       image encoder, LiDAR encoder, ego encoder, planner, baselines
 src/training/     training loop, evaluation, metrics
 src/visualization camera overlay, BEV plot, MP4 rendering, inference entrypoint
 tests/            geometry, projection, metrics, and TFRecord discovery tests
-assets/           repo-owned README graphics only
+assets/           README graphics and a small attributed demo extract
 ```
 
 Raw Waymo files, generated videos, metrics, and checkpoints are intentionally ignored by git.

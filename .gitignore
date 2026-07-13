@@ -22,6 +22,7 @@ outputs/**
 *.tfrecord
 *.tf_record
 *.mp4
+!assets/demo/*.mp4
 *.gif
 *.pt
 *.pth

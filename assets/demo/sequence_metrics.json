@@ -1,0 +1,18 @@
+{
+  "context_names": [
+    "1024360143612057520_3580_000_3600_000"
+  ],
+  "frame_stride": 2,
+  "inference_uses_future_labels": false,
+  "input_contract": "front_camera_lidar_bev_past_ego_motion",
+  "label_source": "future_ego_poses_from_later_log_frames",
+  "mean_ADE": 0.0987891748547554,
+  "mean_FDE": 0.09804894551634788,
+  "mode": "waymo_perception_sequence",
+  "num_frames": 10,
+  "prediction_only_render": true,
+  "preview_frame_index": 0,
+  "source_file": "/mnt/c/Users/joshu/Documents/New project 4/vision-route-waymo/data/raw/waymo_perception/segment-1024360143612057520_3580_000_3600_000_with_camera_labels.tfrecord",
+  "timestamp_end_micros": 1553735857462157,
+  "timestamp_start_micros": 1553735856562211
+}
