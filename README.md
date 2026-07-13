@@ -8,9 +8,9 @@ The repository is intentionally focused: one clean Waymo camera + LiDAR pipeline
 
 ## Demo
 
-![Prediction overlay first frame](assets/demo/prediction_overlay_first_frame.png)
+[![Play the prediction overlay demo](assets/demo/prediction_overlay_first_frame.png)](https://raw.githubusercontent.com/nazar-110/vision-route-waymo/main/assets/demo/prediction_overlay.mp4)
 
-- [Short MP4 prediction overlay demo](assets/demo/prediction_overlay.mp4)
+- [Play the prediction overlay demo (MP4)](https://raw.githubusercontent.com/nazar-110/vision-route-waymo/main/assets/demo/prediction_overlay.mp4)
 - [Bird's-eye-view trajectory comparison](assets/demo/bev_comparison.png)
 - [Demo metrics JSON](assets/demo/sequence_metrics.json)
 
@@ -124,7 +124,7 @@ outputs/video_gallery/waymo_sequence_prediction_only_first_frame.png
 outputs/video_gallery/waymo_sequence_bev.png
 ```
 
-Generated videos and screenshots are not committed to this repo because they are derived from Waymo dataset content and can be regenerated locally after accepting Waymo's terms.
+Full generated videos and screenshots are not committed because they are derived from Waymo dataset content and can be regenerated locally after accepting Waymo's terms. The one-second H.264 preview under `assets/demo/` is an intentional lightweight exception.
 
 ## Predict On A New Waymo Segment
 
@@ -205,9 +205,9 @@ Do not commit:
 - `outputs/waymo_multimodal/`
 - `outputs/video_gallery/`
 - `outputs/predictions/`
-- `*.tfrecord`, `*.pt`, `*.mp4`, `__pycache__/`, `.pytest_cache/`
+- `*.tfrecord`, `*.pt`, other generated `*.mp4` files, `__pycache__/`, `.pytest_cache/`
 
-The `.gitignore` is configured to keep those files out of git.
+The `.gitignore` keeps those files out of git while explicitly allowing the small `assets/demo/prediction_overlay.mp4` preview.
 
 ## Dataset And Attribution
 
@@ -216,14 +216,6 @@ VisionRoute uses the [Waymo Open Dataset](https://waymo.com/open) and the offici
 Required attribution:
 
 > This software was made using the Waymo Open Dataset, provided by Waymo LLC under the Waymo Dataset License Agreement for Non-Commercial Use, available at waymo.com/open/terms, and your access and use of such work are governed by the terms and conditions therein.
-
-## Resume Bullets
-
-- Built a multimodal autonomous-driving planner that predicts future ego-vehicle trajectories from Waymo camera imagery, LiDAR point clouds, and ego-motion history.
-- Converted Waymo LiDAR range images into vehicle-frame point clouds and compact BEV raster channels for neural fusion.
-- Engineered a camera-geometry projection pipeline to overlay predicted driving routes onto real driving videos.
-- Implemented held-out-drive evaluation with ADE, FDE, smoothness metrics, and constant-velocity/constant-curvature baselines.
-- Designed a clean PyTorch training, evaluation, and visualization pipeline for real Waymo camera + LiDAR data.
 
 ## Future Work
 
