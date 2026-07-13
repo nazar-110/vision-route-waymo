@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Playable VisionRoute Waymo trajectory prediction overlay demo.">
+  <title>VisionRoute Prediction Overlay Demo</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: Arial, sans-serif;
+      background: Canvas;
+      color: CanvasText;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    main {
+      width: min(960px, calc(100% - 32px));
+      margin: 40px auto;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: GrayText;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 5 / 3;
+      background: #111;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    a {
+      color: LinkText;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VisionRoute Prediction Overlay</h1>
+    <p>Waymo FRONT-camera sequence with the predicted ego trajectory projected into the image.</p>
+    <video controls preload="metadata" poster="../assets/demo/prediction_overlay_first_frame.png">
+      <source src="../assets/demo/prediction_overlay.mp4" type="video/mp4">
+      Your browser does not support H.264 MP4 playback.
+    </video>
+    <nav aria-label="Project links">
+      <a href="https://github.com/nazar-110/vision-route-waymo">View repository</a>
+      <a href="../assets/demo/sequence_metrics.json">View demo metrics</a>
+    </nav>
+  </main>
+</body>
+</html>

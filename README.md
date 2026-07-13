@@ -8,9 +8,9 @@ The repository is intentionally focused: one clean Waymo camera + LiDAR pipeline
 
 ## Demo
 
-[![Play the prediction overlay demo](assets/demo/prediction_overlay_first_frame.png)](https://raw.githubusercontent.com/nazar-110/vision-route-waymo/main/assets/demo/prediction_overlay.mp4)
+[![Play the prediction overlay demo](assets/demo/prediction_overlay_first_frame.png)](https://nazar-110.github.io/vision-route-waymo/docs/prediction-overlay.html)
 
-- [Play the prediction overlay demo (MP4)](https://raw.githubusercontent.com/nazar-110/vision-route-waymo/main/assets/demo/prediction_overlay.mp4)
+- [Play the prediction overlay demo](https://nazar-110.github.io/vision-route-waymo/docs/prediction-overlay.html)
 - [Bird's-eye-view trajectory comparison](assets/demo/bev_comparison.png)
 - [Demo metrics JSON](assets/demo/sequence_metrics.json)
 
